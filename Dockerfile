@@ -8,13 +8,7 @@ RUN apt-get update && \
 
 VOLUME /src
 
-#USER nobody
-
 WORKDIR /src
-
-RUN groupadd armbuilder && useradd -g armbuilder armbuilder && mkdir /home/armbuilder/ && \
-    chown armbuilder:armbuilder /home/armbuilder
-USER armbuilder
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
