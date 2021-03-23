@@ -5,5 +5,7 @@ This action build firmware for arm target using make.
 ```yaml
 - uses: SiemaApplications/build-arm-action@v1
   with:
-    dir_targets: dir1:target "dir2:target1 target2" dir3:
+    dir: 'app'
+    target: 'all'
+    make_opts: 'V=1'
 ```
