@@ -1,0 +1,15 @@
+name: 'GCC ARM compilation'
+description: 'Compile firmware for arm architecture with GCC and Makefile'
+
+inputs:
+  dir_targets:
+    description: 'List of directory:targets to build'
+    required: false
+    # default to make at root's repository
+    default: ".:"
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.dir_targets }}

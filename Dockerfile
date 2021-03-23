@@ -15,4 +15,6 @@ WORKDIR /src
 RUN groupadd armbuilder && useradd -g armbuilder armbuilder && mkdir /home/armbuilder/ && \
     chown armbuilder:armbuilder /home/armbuilder
 USER armbuilder
-CMD bash
+
+COPY entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
