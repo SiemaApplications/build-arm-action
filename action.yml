@@ -17,4 +17,4 @@ inputs:
 
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'docker://ghcr.io/siemaapplications/build-arm-action:v1'
